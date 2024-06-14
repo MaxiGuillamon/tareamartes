@@ -1,0 +1,9 @@
+li { color: rgb(143, 4, 4);
+font-family: Arial, Helvetica, sans-serif;}
+p { font-family: Arial, Helvetica, sans-serif;}
+h1,h2,h3 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+img {filter: grayscale(4%) brightness(103%) saturate(160%) contrast(102%);
+-webkit-filter: grayscale(4%) brightness(103%) saturate(160%) contrast(102%);
+-moz-filter: grayscale(4%) brightness(103%) saturate(160%) contrast(102%);}
+h1 {text-shadow: 4px 5px 6px rgba(3,3,3,0.5);}
+.destacado { color:rgb(143, 4, 4); }
