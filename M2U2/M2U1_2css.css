@@ -1,0 +1,78 @@
+body{
+    background-color: gray;
+}
+h1{
+    text-align: center;
+    color:aliceblue;
+    border:2px solid #20e2d7;
+}
+.Res{
+  color:aliceblue; 
+ display: grid;
+ place-content: center;
+
+ 
+}
+#Valor{
+ display: grid; 
+ place-content:center;  
+}
+.Conteiner{
+    background-color: rgb(34, 34, 34);
+    position: relative;
+    height: 300px;
+}
+.Aumento{
+   display: block; 
+   text-align: center;
+   position: absolute; 
+   left: 30%; /* si va a la izquierda*/
+   height: 40px;   /*Ancho del boton*/
+   width:100px;  /* Largo del botn*/
+   border-radius:  6px;  /*Radio del botn*/
+   text-transform: uppercase;  /*Transforma el texto en mayusculas*/
+   background-color: rgb(34, 37, 37);  /*cambia el color del fondo*/
+   color:rgb(255, 255, 255)  ;/*cambia de color la letra*/
+   font-size: 12px;  /* Agranda la letra del texto*/
+   overflow: hidden; /*El texto que sobresale se oculta con el valor hidden*/
+   transition: all 500ms ease;
+   border:2px solid #20e2d7; /* cambia el color del borde y le dice que sea solido */
+  font-weight: 700;
+}
+.Aumento:hover{/* Se usa para dar animacion al boton*/
+    animation:shadow-pulse 1000ms 1; /* Se define la animacion en este caso  le puse el nombre shadow-pulse dura 1000ms */
+    background-color:#20e2d7; /* el color en que se pone el fondo con la animacion*/
+    color: rgb(34, 37, 37); /* el color en que se ponene las letras con la animacion*/
+    }
+
+.Disminuir{
+    display: block; 
+    text-align: center;
+    position: absolute; 
+    left: 60%; /* si va a la izquierda*/
+    height: 40px;   /*Ancho del boton*/
+    width:100px;  /* Largo del botn*/
+    border-radius:  6px;  /*Radio del botn*/
+    text-transform: uppercase;  /*Transforma el texto en mayusculas*/
+    background-color: rgb(34, 37, 37);  /*cambia el color del fondo*/
+    color:rgb(255, 255, 255)  ;/*cambia de color la letra*/
+    font-size: 12px;  /* Agranda la letra del texto*/
+    overflow: hidden; /*El texto que sobresale se oculta con el valor hidden*/
+    transition: all 500ms ease;
+    border:2px solid #20e2d7; /* cambia el color del borde y le dice que sea solido */
+   font-weight: 700;
+ }
+ .Disminuir:hover{ /* Se usa para dar animacion al boton*/
+    animation:shadow-pulse 1000ms 1; 
+    background-color:#20e2d7;
+    color: rgb(34, 37, 37);
+    }
+
+@keyframes shadow-pulse { /* declaro la animacion con el nombre que yo le puse*/
+    0% { /* estado inicial de la animacion*/
+        box-shadow: 0 0 0 0 rgba(32, 266, 215, 0.6); /* Estado inicial: sin sombra */
+    }
+    100% {
+        box-shadow: 0 0 8px 16 rgba(32, 266, 215, 0); /* Estado final: sin sombra */
+    }
+}
