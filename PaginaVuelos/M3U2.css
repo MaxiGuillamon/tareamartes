@@ -35,6 +35,17 @@ width: 400px;
 height: 400px;
 
 }
-  
+
+.staff{
+background:#ebebeb80;
+}
+
+.mapa{
+width: 100%;
+aspect-ratio: 1.2;
+}
+  html {
+  scroll-behavior: smooth;
+  }
   
  
