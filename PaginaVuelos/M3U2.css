@@ -1,0 +1,40 @@
+.bg-azul{ 
+background-color: rgb(43, 82, 212);
+}
+.foto-fondo { background: url(IMG/AVION.png) center center no-repeat;
+    background-size:cover;
+    min-height: 600px;
+    color: rgb(255, 255, 255);
+    
+}
+footer{ 
+  background-color: rgb(250, 243, 235);
+  margin-bottom: 5px;
+}
+.Contenido{ 
+background-color: rgba(29, 29, 29, 0.555);
+}
+ 
+.carousel-item { 
+   max-height:500px ;
+  }
+
+  h2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .offcanvas-title { 
+  background-color: darkgray;
+  display: inline-block;/* Para que el <p> ocupe solo el ancho de su contenido */
+  width: 100%; /* Ocupa todo el ancho disponible del contenedor padre */
+  padding: 10px; /* Opcional: Añade padding para espacio interno */
+  }
+
+ .img-thumbnail{
+width: 400px; 
+height: 400px;
+
+}
+  
+  
+ 
