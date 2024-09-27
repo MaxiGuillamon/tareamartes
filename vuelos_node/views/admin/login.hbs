@@ -1,0 +1,28 @@
+
+<!-- As a link -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ViajesAR</a>
+  </div>
+</nav>    
+<!--INICIO DE DE FORMULARO -->
+
+<div class="container" style="margin: 100px;">
+<form action="/admin/login" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nombre de Usuario</label>
+
+    <input type="text" class="form-control" name="usuario">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+
+    <input type="password" class="form-control" id="exampleInputPassword1"name="password">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+</form>
+{{#if error}}
+<p>Usuario o contraseña incorrecto</p>
+{{/if}}
+</div>
