@@ -4,22 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Novedades</title>
 </head>
 
-<body>
-    <div class="container" style="margin-top:50px;">
+
+    <!--BARRAA-->
+<nav class="navbar bg-body-tertiary ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ViajesAR</a>
+  </div>
+</nav>    
+ <!-- Inicio de container -->
+    <div class="container" style="margin:50px auto;">
 
         <div class="row">
             <div class="col">
                 <h2>Proximamente pagina de Novedades</h2>
+
                 <span>Hola {{persona}}!</span>
 
-                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesion<i class="fas fa-sing-out-alt"></i></a>
+                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesion<i class="fa fa-sing-out-alt"></i></a>
 
             </div>
         </div>
     </div>
-</body>
+    <div class="row">
+       <div class="col-7">
+        <h3>Listado de Novedades</h3>
+       </div> 
+
+       <div class="col-2 text-right">
+        <a href="#" class="btn btn-success"><i class="fa fa-plus"></i> Nuevo </a>
+       </div>
+    </div>
+
+
+    <!-- Tabla 1 -->
+    <div class="row">
+        <div class="col">
+            <table class="table ">
+                <thead class="thead-dark table-secondary">
+                    <tr>
+                        <th scope="col">Vuelos_AR</th>
+                        <th scope="col">Viajes</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each novedades}}
+                    <tr>
+                        <th scope="row"></th>
+                        <td>va el Titulo</td>
+                        <td class="text-right">
+                            <a href="#" class="btn btn-sm btn-secondary"><i class="fa fa-pencil"></i></a>
+                            <a href="#" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+
+
 
 </html>
