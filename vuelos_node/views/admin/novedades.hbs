@@ -53,11 +53,11 @@
                 <tbody>
                     {{#each novedades}}
                     <tr>
-                        <th scope="row"></th>
-                        <td>va el Titulo</td>
+                        <th scope="row"> {{id}}</th>
+                        <td> {{titulo}}</td>
                         <td class="text-right">
                             <a href="#" class="btn btn-sm btn-secondary"><i class="fa fa-pencil"></i></a>
-                            <a href="#" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
+                            <a href="/admin/novedades/eliminar/ {{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                     {{/each}}

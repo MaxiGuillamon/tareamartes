@@ -3,12 +3,6 @@ var router =express.Router();
 var novedadesModel = require('./../../models/novedadesModel');
 
 
-router.get('/',function(req,res,next){
- res.render('admin/novedades', {
-  layout:'admin/layout',
-  persona:req.session.nombre //esto es para que una vez entre a la pagina de novedades salude al ususario que inicio sesion
-});
-});
 router.get('/',async function(req, res, next) {
  var novedades = await novedadesModel.getNovedades();
  res.render('admin/novedades' ,{
@@ -16,8 +10,12 @@ layout:'admin/layout',
 usuario: req.session.nombre, novedades
 }); 
 });
+
+
+
  router.get('/eliminar/:id', async(req,res,next)=>{
 var id = req.params.id;
+
 await novedadesModel.deleteNovedadById(id);
 res.redirect('/admin/novedades')  
 });

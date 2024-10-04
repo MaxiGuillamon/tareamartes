@@ -5,19 +5,16 @@ var novedadesModel =require('../models/novedadesModel');
 
 /* GET home page. */
 
-router.get('/', function(req, res, next) {
-  res.render('index');
-});
-
-/* novedades bd */
-router.get('/',async function(req,res,next) {
+router.get('/', async function(req, res, next) {
   novedades = await novedadesModel.getNovedades();
-  
   novedades = novedades.splice(0,5);
-  res.render('index', {
-  novedades
-  }); 
-  });
+  res.render('index',{
+ novedades
+});
+});
+  
+  /*novedades = novedades.splice(0,5); */
+ 
 router.post('/', async (req, res, next) => { //recibo  info a traves del metodo post
   var nombre = req.body.nombre;
   var apellido = req.body.apellido;

@@ -4,7 +4,7 @@ var pool =require('./bd');
 
 
 async function getNovedades() {
-    var query="selec * from novedades";
+    var query="select * from novedades";
     var rows= await pool.query(query);
     return rows;
     
