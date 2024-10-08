@@ -9,16 +9,17 @@ router.get('/',async function(req, res, next) {
 layout:'admin/layout', 
 usuario: req.session.nombre, novedades
 }); 
-});
+}); 
 
-
+/* Para eliminar novedades */
 
  router.get('/eliminar/:id', async(req,res,next)=>{
-var id = req.params.id;
+const id = req.params.id;
 
-await novedadesModel.deleteNovedadById(id);
+await novedadesModel.deleteNovedadesById(id);
 res.redirect('/admin/novedades')  
-});
+}); //cierra eliminar novedades
+
 
 /*router.get('/agregar', (req, res , next)=>{
  res.render('admin/agregar',{
