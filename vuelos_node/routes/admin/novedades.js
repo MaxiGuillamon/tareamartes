@@ -20,34 +20,36 @@ await novedadesModel.deleteNovedadesById(id);
 res.redirect('/admin/novedades')  
 }); //cierra eliminar novedades
 
-
-/*router.get('/agregar', (req, res , next)=>{
- res.render('admin/agregar',{
+ //muestra la vista
+router.get('/agregar', (req, res , next)=>{
+ res.render('admin/agregar',{ //agregar hbs
  layout: 'admin/layout'
 });
-});
-*/
-/*
+});//cierra el get
+
+
+// inserta en  la BD en la tabla de novedades
 router.post('/agregar', async (req, res, next) => {
  try {
-    if(req.body.titulo!=""&& req.body.subtitulo !=""&& req.body.cuerpo!=""){
-        await novedadesModel.insertNovedades(req.body);
+    if(req.body.titulo  !="" && req.body.subtitulo !="" && req.body.cuerpo  !=""){
+        await novedadesModel.insertNovedad(req.body);
         res.redirect('/admin/novedades')
-    } else {
+    } else {  
         res.render('admin/agregar', {
             layout:'admin/layout',
             error: true, message:'Todos los campos son requeridos'
     })
 }
- }catch (error){
+ }  catch (error){
     console.log(error)
     res.render('admin/agregar',{
         layout:'admin/layout',
-        error: true, message:'No se cargo la novedad'
+        error: true,
+         message:'No se cargo la novedad'
     });
 }   
 });
-*/
+
 /* Paso 3 unidad 2
 router.get('/modificar/:id',async (req, res, next) {
     let id =req.params.id;
