@@ -50,25 +50,29 @@ router.post('/agregar', async (req, res, next) => {
 }   
 });
 
-/* Paso 3 unidad 2
-router.get('/modificar/:id',async (req, res, next) {
-    let id =req.params.id;
-    let novedad = await novedadesModel.getNovedadById(id);
-    res.render('admin/modificar' ,{
-   layout:'admin/layout', novedad
 
+router.get('/modificar/:id', async (req, res, next) => {
+    var id =req.params.id;
+
+    var novedad = await novedadesModel.getNovedadById(id);
+    
+    res.render('admin/modificar' ,{ //modificar.hbs
+        layout:'admin/layout', 
+        novedad
    }); 
-   });
-*/
-/* Paso 5
+   }); //cierre get modificar
+
+
 router.post('/modificar', async (req, res, next) => {
     try {
-       let obj =  {
+       var obj =  {
         titulo:req.body.titulo,
         subtitulo: req.body.subtitulo, 
         cuerpo: req.body.cuerpo
        }
-       await novedadesModel.modificarNovedadById(obj, req.body.id);
+
+
+       await novedadesModel.modificarNovedadesById(obj, req.body.id);
        res.redirect('/admin/novedades');
        
    }
@@ -80,5 +84,5 @@ router.post('/modificar', async (req, res, next) => {
        })
    }   
    })
-   */
+   
 module.exports= router;

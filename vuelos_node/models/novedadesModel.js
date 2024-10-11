@@ -16,7 +16,7 @@ var query ="delete from novedades where id = ?";
 var rows= await pool.query(query, [id]);
 return rows;
 }
-//module.exports = {getNovedades, deleteNovedadesById}
+
 
 
 async function insertNovedad(obj) {
@@ -32,11 +32,12 @@ async function insertNovedad(obj) {
 } //cierra insert
 
 
-module.exports = { getNovedades, deleteNovedadesById, insertNovedad} 
-/*
-async function deleteNovedadById(id){
-    var query ="selcet * from novedades where id = ?";
-    var rows= await pool.qery(query, [id]);
+
+// traigo los datos para modificar solo una novedad
+async function getNovedadById(id){
+    var query ="select * from novedades where id = ?";
+
+    var rows= await pool.query(query, [id]);
     return rows[0];
     }
 
@@ -49,6 +50,7 @@ async function deleteNovedadById(id){
       } catch (error){
           throw error;
       }
-      module.exports = { getNovedades,insertNovedad,deleteNovedadById,getNovedadById,modificarNovdedaById }
       }
-      */
+      
+      module.exports = { getNovedades, insertNovedad, deleteNovedadesById, getNovedadById, modificarNovedadesById  } 
+      
