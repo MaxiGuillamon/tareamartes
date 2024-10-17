@@ -7,63 +7,67 @@
     <title>Novedades</title>
 </head>
 
+<!--BARRAA-->
+<nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="color: rgb(226, 225, 222);" href="#">ViajesAR</a>
+        <div class="d-flex justify-content-end"> <!-- lo pongo adentro del contenedor de la barra de navegación para alinear el botón a la derecha y  d-flex para habilitar flexbox y justify-content-end para mover el botón a la derecha -->
+            <a href="/admin/login/logout" class="btn btn-danger ms-auto">Cerrar sesión<i class="fa fa-sign-out-alt"></i></a>
+        </div>
+    </div>
+</nav>
 
-    <!--BARRAA-->
-<nav class="navbar bg-body-tertiary ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">ViajesAR</a>
-  </div>
-</nav>    
- <!-- Inicio de container -->
-    <div class="container" style="margin:50px auto;">
-
-        <div class="row">
-            <div class="col">
-                <h2>Proximamente pagina de Novedades</h2>
-
+<!-- Inicio de container -->
+<div class="container" style="margin:50px auto;">
+    <div class="row">
+        <div class="col">
+            <div class="titulo">
+                <h2>Próximamente página de Novedades!</h2>
+            </div>
+            <div class="texto-span">
                 <span>Hola {{persona}}!</span>
-
-                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesion<i class="fa fa-sing-out-alt"></i></a>
-
             </div>
         </div>
     </div>
-    <div class="row">
-       <div class="col-7">
+</div>
+
+<div class="row">
+    <div class="col-7">
         <h3>Listado de Novedades</h3>
-       </div> 
+    </div>
 
-       <div class="col-2 text-right">
+    <div class="col-2 text-right">
+       
         <a href="/admin/novedades/agregar" class="btn btn-success"><i class="fa fa-plus"></i> Nuevo </a>
-       </div>
+        
     </div>
+</div>
 
-
-    <!-- Tabla 1 -->
-    <div class="row">
-        <div class="col">
-            <table class="table ">
-                <thead class="thead-dark table-secondary">
-                    <tr>
-                        <th scope="col">Vuelos_AR</th>
-                        <th scope="col">Viajes</th>
-                        <th scope="col" class="text-center">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each novedades}}
-                    <tr>
-                        <th scope="row"> {{id}}</th>
-                        <td> {{titulo}}</td>
-                        <td class="text-right">
-                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-pencil"></i></a>
-                            <a href="/admin/novedades/eliminar/ {{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
-                    {{/each}}
-                </tbody>
-            </table>
-        </div>
+<!-- Tabla 1 -->
+<div class="row">
+    <div class="col">
+        <table class="table ">
+            <thead class="thead-dark table-secondary">
+                <tr>
+                    <th scope="col">Vuelos_AR</th>
+                    <th scope="col">Viajes</th>
+                    <th scope="col" class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each novedades}}
+                <tr>
+                    <th scope="row"> {{id}}</th>
+                    <td> {{titulo}}</td>
+                    <td class="text-right">
+                        <a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-pencil"></i></a>
+                        <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
     </div>
+</div>
 
 </html>
